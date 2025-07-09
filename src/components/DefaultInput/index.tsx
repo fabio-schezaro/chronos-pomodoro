@@ -1,3 +1,5 @@
+import styles from './styles.module.css';
+
 type DefaultInputProps = {
   id: string;
   labelText?: string /* ? significa que a propriedade é opcional */;
@@ -14,7 +16,7 @@ export function DefaultInput({
       {/* condição ? 'Verdadeiro' : 'Falso' */}
       {/* condição && 'Verdadeiro'*/} {/* Se não tiver valor para falso */}
       {labelText && <label htmlFor={id}>{labelText}</label>}
-      <input id={id} type={type} {...rest} />
+      <input className={styles.input} id={id} type={type} {...rest} />
     </>
   );
 }
