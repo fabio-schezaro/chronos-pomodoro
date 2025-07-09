@@ -9,14 +9,14 @@ export function DefaultInput({
   id,
   type,
   labelText,
-  ...rest
+  ...props
 }: DefaultInputProps) {
   return (
     <>
       {/* condição ? 'Verdadeiro' : 'Falso' */}
       {/* condição && 'Verdadeiro'*/} {/* Se não tiver valor para falso */}
       {labelText && <label htmlFor={id}>{labelText}</label>}
-      <input className={styles.input} id={id} type={type} {...rest} />
+      <input className={styles.input} id={id} type={type} {...props} />
     </>
   );
 }
